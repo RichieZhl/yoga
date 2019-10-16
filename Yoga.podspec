@@ -13,6 +13,16 @@ Pod::Spec.new do |spec|
     :git => 'https://github.com/RichieZhl/yoga',
     :tag => spec.version.to_s,
   }
+  spec.header_dir = 'yoga'
+  spec.requires_arc = false
+  spec.compiler_flags = [
+      '-fno-omit-frame-pointer',
+      '-fexceptions',
+      '-Wall',
+      '-Werror',
+      '-std=c++1y',
+      '-fPIC'
+  ]
   spec.platforms = { :ios => "9.0", :tvos => "9.2" }
 
   # Set this environment variable when *not* using the `:path` option to install the pod.
