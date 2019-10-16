@@ -13,16 +13,6 @@
 
 using namespace facebook;
 
-YGFloatOptional::YGFloatOptional(float value) {
-  if (yoga::isUndefined(value)) {
-    isUndefined_ = true;
-    value_ = 0;
-  } else {
-    value_ = value;
-    isUndefined_ = false;
-  }
-}
-
 float YGFloatOptional::getValue() const {
   if (isUndefined_) {
     // Abort, accessing a value of an undefined float optional
