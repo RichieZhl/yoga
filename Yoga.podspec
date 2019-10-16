@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'Yoga'
-  spec.version = '0.55.4.React'
+  spec.version = '1.14.0'
   spec.license =  { :type => 'MIT', :file => "LICENSE" }
   spec.homepage = 'https://yogalayout.com/'
   spec.documentation_url = 'https://yogalayout.com/docs'
@@ -13,21 +13,12 @@ Pod::Spec.new do |spec|
     :git => 'https://github.com/RichieZhl/yoga',
     :tag => spec.version.to_s,
   }
-  spec.platforms = { :ios => "8.0", :tvos => "10.0" }
-  spec.module_name = 'yoga'
-  spec.requires_arc = false
-  spec.pod_target_xcconfig = {
-    'DEFINES_MODULE' => 'YES'
-  }
-  spec.compiler_flags = [
-      '-fno-omit-frame-pointer',
-      '-fexceptions',
-      '-Wall',
-      '-Werror',
-      '-std=c++1y',
-      '-fPIC'
-  ]
-  spec.source_files = 'yoga/**/*.{c,h,cpp}'
-  spec.public_header_files = 'yoga/{Yoga,YGEnums,YGMacros}.h'
+  spec.platforms = { :ios => "9.0", :tvos => "9.2" }
+
+  # Set this environment variable when *not* using the `:path` option to install the pod.
+  # E.g. when publishing this spec to a spec repo.
+  spec.source_files = 'yoga/**/*.{cpp,h}'
+
+  spec.public_header_files = 'yoga/{Yoga,YGEnums,YGMacros,YGValue}.h'
 
 end
