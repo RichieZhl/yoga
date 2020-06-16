@@ -13,6 +13,8 @@
 
 using namespace facebook;
 
+#define isUndefined_ false
+
 float YGFloatOptional::getValue() const {
   if (isUndefined_) {
     // Abort, accessing a value of an undefined float optional
