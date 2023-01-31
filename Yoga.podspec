@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'Yoga'
-  spec.version = '1.14.2'
+  spec.version = '1.14.3'
   spec.license =  { :type => 'MIT', :file => "LICENSE" }
   spec.homepage = 'https://yogalayout.com/'
   spec.documentation_url = 'https://yogalayout.com/docs'
@@ -23,12 +23,12 @@ Pod::Spec.new do |spec|
       '-std=c++1y',
       '-fPIC'
   ]
-  spec.platforms = { :ios => "9.0", :tvos => "9.2" }
+  spec.platforms = { :ios => "12.4" }
 
   # Set this environment variable when *not* using the `:path` option to install the pod.
   # E.g. when publishing this spec to a spec repo.
   spec.source_files = 'yoga/**/*.{cpp,h}'
 
-  spec.public_header_files = 'yoga/{Yoga,YGEnums,YGMacros,YGValue}.h'
+  spec.public_header_files = 'yoga/*.h'
 
 end
